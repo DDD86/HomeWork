@@ -25,3 +25,17 @@ else
     Console.WriteLine("Это число не является палиндромом");
 }
 }
+
+//Нахождение с помощью string:
+// Console.Write("Введите пятизначное число: ");
+// int number1 = Convert.ToInt32(Console.ReadLine());
+// string number2 = Convert.ToString(number1);
+// if (number2[0] == number2[4] && number2[1] == number2[3])
+// {
+//    Console.WriteLine("Это число является палиндромом"); 
+// }
+// else
+// {
+//     Console.WriteLine("Это число не является палиндромом");
+// }
+
