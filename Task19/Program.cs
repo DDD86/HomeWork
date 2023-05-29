@@ -18,11 +18,11 @@ numberCheck3 = (numberCheck1 * 10) + numberCheck2; // слияние в обра
 
 if (numberCheck0 == numberCheck3)
 {
-    Console.WriteLine("Это число является палиндромом");
+    Console.WriteLine($"Число {number} является палиндромом");
 }
 else
 {
-    Console.WriteLine("Это число не является палиндромом");
+    Console.WriteLine($"Число {number} не является палиндромом");
 }
 }
 
@@ -30,12 +30,16 @@ else
 // Console.Write("Введите пятизначное число: ");
 // int number1 = Convert.ToInt32(Console.ReadLine());
 // string number2 = Convert.ToString(number1);
-// if (number2[0] == number2[4] && number2[1] == number2[3])
+// if (number1 < 10000 || number1 > 99999)
 // {
-//    Console.WriteLine("Это число является палиндромом"); 
+//     Console.WriteLine("Введено не пятизначное число!");
+    
+// }
+// else if (number2[0] == number2[4] && number2[1] == number2[3])
+// {
+//    Console.WriteLine($"Число {number2} является палиндромом"); 
 // }
 // else
 // {
-//     Console.WriteLine("Это число не является палиндромом");
+//     Console.WriteLine($"Число {number2} не является палиндромом");
 // }
-
