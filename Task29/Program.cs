@@ -5,7 +5,7 @@ int[] array = new int[size];
 Random rand = new Random();
 for (int i = 0; i < size; i++)
 {
-    array[i] = rand.Next(1, 9);
+    array[i] = rand.Next(1, 100);
 }
 
 Console.WriteLine($"Массив: [ {String.Join("; ",array)} ]");
