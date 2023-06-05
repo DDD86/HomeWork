@@ -23,4 +23,4 @@ int[] FindOddNumSum(int[] arr){
 
 int[] array = GetArray(10, 1, 20);
 Console.WriteLine($"Массив: [ {String.Join("; ", array)} ]");
-int[] arr = FindOddNumSum(array);
+int[] arrFindSum = FindOddNumSum(array);
