@@ -33,5 +33,5 @@ int[] FindEvenNum(int[] arr){
 
 int[] array = GetArray(10, 100, 999);
 Console.WriteLine($"Массив: [ {String.Join("; ", array)} ]");
-int[] arr = FindEvenNum(array);
+int[] arrFindNum = FindEvenNum(array);
 
