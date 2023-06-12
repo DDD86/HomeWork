@@ -1,5 +1,4 @@
-﻿//Задача 50. Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, 
-// и возвращает значение этого элемента или же указание, что такого элемента нет.
+﻿//Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
 
 Console.Write("Введите количество строк: ");
 int rows = Convert.ToInt32(Console.ReadLine());
@@ -7,9 +6,9 @@ int rows = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите количество cтолбцов: ");
 int columns = Convert.ToInt32(Console.ReadLine());
 
-int[,] GetArray2d(int m, int n, int min, int max)
+double[,] GetArray2d(int m, int n, int min, int max)
 {
-    int[,] matrix = new int[m, n];
+    double[,] matrix = new double[m, n];
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
@@ -20,31 +19,34 @@ int[,] GetArray2d(int m, int n, int min, int max)
     return matrix;
 }
 
-void PrintMatrix(int[,] array)
+void PrintMatrix(double[,] array)
 {
-    for (int i = 0; i < array.GetLength(0); i++) 
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-        for (int j = 0; j < array.GetLength(1); j++) 
+        for (int j = 0; j < array.GetLength(1); j++)
         {
-            Console.Write(array[i,j] + "\t"); 
+            Console.Write(array[i, j] + "\t");
         }
         Console.WriteLine();
     }
 }
 
-int[,] array2d = GetArray2d(rows, columns, 0, 10);
+double[,] array2d = GetArray2d(rows, columns, 0, 10);
 PrintMatrix(array2d);
 
-Console.WriteLine("Введите позицию элемента(номер строки)");
-int n = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите позицию элемента(номер столбца)");
-int m = Convert.ToInt32(Console.ReadLine());
+void Avarage(double[,] arr)
+{
+    Console.Write($"Среднее арифметическое столбцов данного массива равно: ");
+    for (int j = 0; j < arr.GetLength(1); j++)
+{
+    double avarage = 0;
+    for (int i = 0; i < arr.GetLength(0); i++)
+    {
+        avarage = (avarage + arr[i, j]);
+    }
+    avarage = Math.Round(avarage / columns, 2);
+    Console.Write($"[{j+1}: {avarage}]; ");
+}
+}
 
-if (n >= array2d.GetLength(0) || m >= array2d.GetLength(1))
-{
-    Console.WriteLine("Вы вышли за пределы массива!");
-}
-else
-{
-    Console.WriteLine($"Значение элемента {n} строки и {m} столбца равно {array2d[n,m]}");                                  
-}
+Avarage(array2d);
