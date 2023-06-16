@@ -12,4 +12,4 @@ int GetSumOfNumbers(int start, int end)
     return start + GetSumOfNumbers(start + 1 , end);
 }
 
-Console.WriteLine($"Сумма натуральных чисел в промежутке от {M} до {N} равно: {GetSumOfNumbers(M, N)}");
+Console.WriteLine($"Сумма натуральных чисел в промежутке от [{M}] до [{N}] равно: [{GetSumOfNumbers(M, N)}]");
