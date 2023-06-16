@@ -5,10 +5,10 @@ int A = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите степень: ");
 int B = Convert.ToInt32(Console.ReadLine());
 
-int GetPow(int number, int pow)
+int GetPow(int number, int degree)
 {
-    if (pow == 0) return 1;
-    return number * GetPow(number, pow - 1);
+    if (degree == 0) return 1;
+    return number * GetPow(number, degree - 1);
 }
 
 Console.WriteLine($"Число {A} в степени {B} равно: {GetPow(A, B)}");
