@@ -29,7 +29,7 @@ void PrintMatrix(int[,] array)
     }
 }
 
-void SumOfArrayRows(int[,] array)
+void MinRowSumOfArray(int[,] array)
 {
     int min = int.MaxValue;
     int line = 0;
@@ -50,7 +50,7 @@ void SumOfArrayRows(int[,] array)
     Console.WriteLine($"Наименьшая сумма: [{min}], находится в строке: [{line}]");
 }
 
-SumOfArrayRows(matrix);
+MinRowSumOfArray(matrix);
 
 
 
